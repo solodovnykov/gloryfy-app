@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import Canvas from "../components/Canvas/Canvas";
-import Editor from "../components/Editor/Editor";
+import Card from "../components/Card/Card";
+import Test from "../components/Test/Test";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -14,7 +13,8 @@ export default function Home() {
       </Head>
 
       <div className={styles.wrapper}>
-        <Canvas />
+        <Card />
+        {/* <Test /> */}
       </div>
     </div>
   );
