@@ -37,6 +37,7 @@ const messages = {
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
+  console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS);
 
   return (
     <>
