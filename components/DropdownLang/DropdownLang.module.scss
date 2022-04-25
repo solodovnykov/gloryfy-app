@@ -1,0 +1,60 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 34px;
+
+  .head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+
+    .arrow {
+      width: 9px;
+      height: 5px;
+      background-image: url("/icons/arrow.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: 0.1s all ease-in-out;
+      opacity: 0.4;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #626265;
+      margin: 0;
+      user-select: none;
+    }
+  }
+
+  .langList {
+    background: #c4c4c42f;
+    border-radius: 4px;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 25px;
+    left: -8px;
+    height: auto;
+    overflow: hidden;
+    transition: 0.1s all ease-in-out;
+    font-weight: 300;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    backdrop-filter: blur(15px);
+
+    a {
+      text-decoration: none;
+      color: rgb(127, 127, 127);
+    }
+  }
+}

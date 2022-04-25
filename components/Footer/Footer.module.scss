@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 40px 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+
+  p {
+    margin: 0;
+    color: #3c3c3c;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #5f5f5f;
+    margin: 0 0 0 5px;
+  }
+}

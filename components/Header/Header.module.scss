@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 0 0;
+  position: relative;
+  z-index: 20;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    background: rgba(32, 33, 36, 0.7);
+    backdrop-filter: blur(30px);
+    border-radius: 50%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 22px;
+      top: 50%;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-image: url("/icons/herb.svg");
+      transform: translate(-50%, -47%);
+      background-position: center;
+      background-size: contain;
+      opacity: .5;
+    }
+  }
+  .rightWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+
+    .supportBtn {
+    padding: 10px 25px;
+    background: #202124;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #626265;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.04em;
+  }
+  }
+
+  
+}

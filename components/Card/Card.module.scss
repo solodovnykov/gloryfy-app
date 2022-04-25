@@ -1,12 +1,51 @@
+.cardWrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 412px;
+    height: 443px;
+    background-image: url("/bg/5.png");
+    bottom: -120px;
+    right: -225px;
+    mix-blend-mode: lighten;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 472px;
+    background-image: url("/bg/4.png");
+    top: 175px;
+    left: -115px;
+    mix-blend-mode: lighten;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
 .card {
   width: 300px;
   background: rgba(25, 26, 29, 0.5);
-  backdrop-filter: blur(32px);
+  backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 15px;
   display: flex;
   flex-direction: column;
-  margin: 100px 0 0 0;
+  position: relative;
+  z-index: 20;
+  transition: 0.2s margin ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 
   .head {
     width: 270px;
@@ -19,6 +58,8 @@
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+    transition: 0.1s all ease-in-out;
+    z-index: 10;
 
     .noise {
       width: 260px;
@@ -30,7 +71,7 @@
       border-radius: 50%;
       background-repeat: repeat;
       opacity: 0.6;
-      background-size: 35%;
+      background-size: 15%;
       z-index: 100;
     }
 
@@ -48,21 +89,42 @@
     //   background-size: 15%;
     // }
 
-    .profileImage {
+    .profileImageWrapper {
       width: 260px;
       height: 260px;
       border-radius: 50%;
-      box-shadow: inset 0px -4px 10px rgba(250, 255, 0, 0.2),
-        inset 0px 4px 10px rgba(0, 117, 255, 0.2);
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url("/images/profileDefaultImage.png");
+      overflow: hidden;
+      position: relative;
+
+      .profileShadow {
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        z-index: 100;
+      }
+
+      .profileImage {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("/images/profileDefaultImage.png");
+      }
     }
   }
 
+  .fileError {
+    color: #777;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+  }
+
   .body {
-    margin: 15px 0 0 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -92,6 +154,7 @@
       background: #2b99ff;
       display: flex;
       justify-content: center;
+      cursor: pointer;
     }
 
     .settings {
@@ -150,6 +213,7 @@
             font-size: 14px;
             line-height: 17px;
             color: #626265;
+            white-space: nowrap;
           }
 
           .switch {
@@ -189,7 +253,7 @@
       width: 200px;
       height: 200px;
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
 
       .circle {

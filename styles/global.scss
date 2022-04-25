@@ -13,6 +13,50 @@ body {
   font-family: "SFProText", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  position: relative;
+  overflow-x: hidden;
+  font-smooth: always;
+
+  &::after {
+    content: "";
+    width: 200vw;
+    height: 220vh;
+    background-image: url("/images/grain.png");
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    z-index: 15;
+    background-repeat: repeat;
+
+    pointer-events: none;
+    animation: grain 1.5s steps(6) infinite;
+    overflow: hidden;
+    opacity: 0.5;
+  }
+
+  &::before {
+    content: "";
+    width: 592px;
+    height: 328px;
+    background-image: url("/bg/3.png");
+    background-repeat: no-repeat;
+    bottom: 0;
+    right: -100px;
+    position: fixed;
+    mix-blend-mode: lighten;
+    background-size: 60%;
+    background-position: bottom;
+    transition: .2s all ease-in-out;
+
+    @media (max-width: 1000px) {
+      background-size: 50%;
+      right: -250px;
+    }
+    @media (max-width: 700px) {
+      background-size: 30%;
+      right: -250px;
+    }
+  }
 }
 
 // fonts
@@ -52,10 +96,21 @@ body {
   font-style: normal;
 }
 
+.container-global {
+  max-width: 2000px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
 .container {
   max-width: 900px;
+  padding: 0 15px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 input[type="range"] {
@@ -110,4 +165,49 @@ input[type="range"]::-ms-thumb {
   border-radius: 3px;
 
   cursor: pointer;
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(-3%, -15%);
+  }
+  50% {
+    transform: translate(-12%, 9%);
+  }
+  70% {
+    transform: translate(-9%, 4%);
+  }
+  90% {
+    transform: translate(-1%, 7%);
+  }
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  width: 10px;
+  background: #0c0c0c;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #dedede2e;
+  opacity: 0.2;
+  transition: all 0.2s ease-in-out;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #dedede2f;
+  opacity: 0.3;
+  transition: all 0.2s ease-in-out;
 }

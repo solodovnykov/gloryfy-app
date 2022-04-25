@@ -1,0 +1,52 @@
+.glass1 {
+  position: absolute;
+  width: 673px;
+  height: 226px;
+  background-image: url("/bg/1.png");
+  top: 0;
+  left: 15px;
+  mix-blend-mode: lighten;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  transition: .2s all ease-in-out;
+
+  @media (max-width: 1750px) {
+    left: -120px;
+  }
+  @media (max-width: 1500px) {
+    left: -250px;
+  }
+  @media (max-width: 1000px) {
+    background-size: 50%;
+    left: -150px;
+  }
+  @media (max-width: 500px) {
+    background-size: 30%;
+    left: -80px;
+  }
+}
+
+.glass2 {
+  position: absolute;
+  width: 450px;
+  height: 472px;
+  background-image: url("/bg/2.png");
+  top: 0;
+  right: -125px;
+  mix-blend-mode: lighten;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  transition: .2s all ease-in-out;
+
+  @media (max-width: 1500px) {
+    right: -205px;
+  }
+  @media (max-width: 1300px) {
+    right: -300px;
+  }
+  @media (max-width: 1000px) {
+    right: -320px;
+    top: 80px;
+    background-size: 50%;
+  }
+}

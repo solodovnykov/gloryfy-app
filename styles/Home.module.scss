@@ -2,6 +2,53 @@
   padding: 0 2rem;
 }
 
+.glass1 {
+  position: absolute;
+  width: 673px;
+  height: 226px;
+  background-image: url("/bg/1.png");
+  top: 0;
+  left: 15px;
+  mix-blend-mode: lighten;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.glass2 {
+  position: absolute;
+  width: 450px;
+  height: 472px;
+  background-image: url("/bg/2.png");
+  top: 0;
+  right: -125px;
+  mix-blend-mode: lighten;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+// .glass3 {
+//   position: absolute;
+//   width: 450px;
+//   height: 472px;
+//   background-image: url("/bg/4.png");
+//   top: 155px;
+//   left: 160px;
+//   mix-blend-mode: lighten;
+//   background-size: 70%;
+//   background-repeat: no-repeat;
+// }
+// .glass4 {
+//   position: absolute;
+//   width: 412px;
+//   height: 443px;
+//   background-image: url("/bg/5.png");
+//   top: 380px;
+//   right: 60px;
+//   mix-blend-mode: lighten;
+//   background-size: 70%;
+//   background-repeat: no-repeat;
+// }
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -118,9 +165,14 @@
 .wrapper {
   max-width: 1000px;
   width: 100%;
-  margin: 0 auto;
+  margin: 100px auto 100px auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 35px;
+
+  @media (max-width: 700px) {
+    margin: 60px auto 140px auto;
+  }
 }
