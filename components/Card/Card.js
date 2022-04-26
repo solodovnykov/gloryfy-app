@@ -286,6 +286,8 @@ const Card = () => {
                 style={{ display: "none" }}
                 id="downloadLink"
                 href={mergedImage}
+                target="_blank"
+                rel="noreferrer"
                 download={fileName}>
                 Download
               </a>
